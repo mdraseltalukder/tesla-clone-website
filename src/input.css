@@ -13,7 +13,7 @@ html {
 }
 @media (min-width: 768px) {
   .car-details h1 {
-    @apply text-7xl font-[500];
+    @apply text-7xl;
   }
   strong {
     @apply text-4xl;
