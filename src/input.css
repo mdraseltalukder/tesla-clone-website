@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 62.5%;
+}
+@media (min-width: 1024px) {
+  strong {
+    @apply text-3xl;
+  }
+}
+@media (min-width: 768px) {
+  h1 {
+    @apply text-7xl font-[500];
+  }
+  strong {
+    @apply text-4xl;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply text-9xl font-[500];
+  }
+  h2 {
+    @apply text-xl;
+  }
+  p {
+    @apply text-2xl lg:text-xl tracking-tight;
+  }
+  strong {
+    @apply text-5xl font-[500];
+  }
+}
+
+@layer components {
+  .menu {
+    @apply relative inline-block  hover:visible;
+  }
+  .navbar {
+    @apply text-[2rem] lg:text-[1.7rem]   font-[500] hover:bg-slate-400 px-4 py-2 rounded-lg duration-500;
+  }
+  .header {
+    @apply sm:h-[60px] sm:px-10 fixed top-0 z-40 w-full sm:flex sm:justify-between sm:flex-row sm:items-center;
+  }
+  .header-img {
+    @apply w-[150px];
+  }
+  .menu {
+    @apply bg-slate-400 lg:bg-inherit;
+  }
+
+  .snap-main {
+    @apply snap-y  snap-mandatory h-screen overflow-scroll scroll-smooth;
+  }
+
+  .hero-section {
+    @apply w-full h-screen relative snap-always snap-start;
+  }
+  .hero-img {
+    @apply h-screen w-full object-cover;
+  }
+
+  .car-details {
+    @apply absolute top-[22%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center flex flex-col gap-3 tracking-tight;
+  }
+
+  .car-button {
+    @apply absolute bottom-[12%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center flex flex-col md:flex  md:flex-row gap-10;
+  }
+  .btn {
+    @apply capitalize  px-52 py-5 md:px-32 md:py-3 bg-slate-50 text-[20px] md:text-[16px] font-[500] rounded-lg hover:border-transparent focus:outline-none focus:ring-2 focus:ring-slate-600 focus:ring-offset-2;
+  }
+  .enventory {
+    @apply bg-[rgb(99,99,97)] text-slate-200;
+  }
+  .arrow-icon {
+    @apply absolute bottom-[0%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center text-6xl;
+  }
+  .panel-details {
+    @apply text-white;
+  }
+  .panel-icon {
+    @apply text-white;
+  }
+}
